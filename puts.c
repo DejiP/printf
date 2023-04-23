@@ -7,13 +7,5 @@
 
 void _puts(char *str)
 {
-char *null = "(null)";
-if (str != NULL)
-{
 write(1, str, strlen(str));
-}
-else
-{
-write(1, null, strlen(null));
-}
 }
