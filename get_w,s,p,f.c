@@ -1,16 +1,14 @@
 #include "main.h"
 
-/****************** flags  ******************/
+/*function to get flag */
 /**
- * get_flags - Calculates active flags
- * @format: Formatted string in which to print the arguments
- * @i: parameter
- * Return: Flags:
+ * get_flags - cals flags
+ * @format: converion indenifiers
+ * @i: arg
+ * Return: flag
  */
 int get_flags(const char *format, int *i)
 {
-	/* - + 0 # ' ' */
-	/* 1 2 4 8  16 */
 	int j, curr_i;
 	int flags = 0;
 	const char FLAGS_CH[] = {'-', '+', '0', '#', ' ', '\0'};
@@ -34,15 +32,15 @@ int get_flags(const char *format, int *i)
 	return (flags);
 }
 
-/****************** precision  ******************/
+/*function to get precision  */
 
 /**
- * get_precision - Calculates the precision for printing
- * @format: Formatted string in which to print the arguments
- * @i: List of arguments to be printed
- * @list: list of arguments
+ * get_precision - gets precision
+ * @format: con identifiers
+ * @i: arg
+ * @list: list
  *
- * Return: Precision.
+ * Return: the appropraite prec.
  */
 int get_precision(const char *format, int *i, va_list list)
 {
@@ -76,7 +74,7 @@ int get_precision(const char *format, int *i, va_list list)
 	return (precision);
 }
 
-/****************** precision  ******************/
+/* function to get the precision */
 
 /**
  * get_size - Calculates the size to cast the argument
@@ -103,15 +101,15 @@ int get_size(const char *format, int *i)
 	return (size);
 }
 
-/****************** width  ******************/
+/*width */
 
 /**
- * get_width - Calculates the width for printing
- * @format: Formatted string in which to print the arguments
- * @i: List of arguments to be printed
- * @list: list of arguments
+ * get_width - get witdh
+ * @format: format
+ * @i: i
+ * @list: list
  *
- * Return: width.
+ * Return: width
  */
 int get_width(const char *format, int *i, va_list list)
 {
