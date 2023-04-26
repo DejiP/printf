@@ -47,7 +47,6 @@ va_list list, char buffer[], int flags, int width, int precision, int size);
 
 
 /*********FUNCTIONS********* FUNCTIONS ********FUNCTIONS**********/
-
 /* to print chars and strings */
 int put_percent(va_list types, char buffer[],
         int flags, int width, int precision, int size);
